@@ -2,7 +2,6 @@ import os,sys
 from sqlalchemy import Float, Integer, String, create_engine
 import pandas as pd
 
-
 from data_utils import DataUtils
 
 from dotenv import load_dotenv
@@ -70,7 +69,7 @@ def data_to_db(data_file):
 
 
 if __name__ == "__main__":
-    data_file = os.getcwd() + "/data/20181024_d1_0830_0900.csv" 
+    data_file = '/Users/abdi/Development/10academy/10academy-week2-Traffic-Analysis' + "/data/20181024_d1_0830_0900.csv" 
 
     data_to_db(data_file)
 
