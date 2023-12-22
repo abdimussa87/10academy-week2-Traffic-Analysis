@@ -1,0 +1,12 @@
+dbt_traffic_analysis:
+  outputs:
+    dev:
+      dbname: traffic_analysis
+      host: localhost
+      pass: ""
+      port: 5432
+      schema: public
+      threads: 3
+      type: postgres
+      user: abdi
+  target: dev
