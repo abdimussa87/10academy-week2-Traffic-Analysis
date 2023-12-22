@@ -142,3 +142,6 @@ airflow/standalone_admin_password.txt
 # config
 database/config.py
 dags/config.py
+airflow.db
+.DS_Store
+.DS_Store
