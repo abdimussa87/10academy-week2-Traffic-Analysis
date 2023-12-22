@@ -17,8 +17,8 @@ class DBUtils:
     def __init__(self):
         self.engine = create_engine(f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
-    def insert_common_information_df_to_db(self, common_information_df, table_name):
-        common_information_df.to_sql(
+    def insert_vehicle_information_df_to_db(self, vehicle_information_df, table_name):
+        vehicle_information_df.to_sql(
             table_name,
             self.engine,
             if_exists='replace',
@@ -61,9 +61,9 @@ def data_to_db(data_file):
     data_reader = DataUtils()
     db = DBUtils()
 
-    common_df, trajectory_df = data_reader.df_from_csv(data_file)
+    vehicle_df, trajectory_df = data_reader.df_from_csv(data_file)
 
-    db.insert_common_information_df_to_db(common_df,'common_information')
+    db.insert_vehicle_information_df_to_db(vehicle_df,'vehicle_information')
     db.insert_trajectory_df_to_db(trajectory_df,'trajectory_information')
 
 
