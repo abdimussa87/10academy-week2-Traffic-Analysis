@@ -19,7 +19,9 @@ transformed data from the warehouse.
 
 ## Data
 
-The data used can be found from [here](https://open-traffic.epfl.ch/index.php/downloads/#1599231663903-a989d87d-e58d)
+The data used can be found from [here](https://open-traffic.epfl.ch/index.php/downloads/#1599231663903-a989d87d-e58d).
+
+You can find the live DBT dashboard with generated lineage-graphs from [here](https://pneuma-traffic-analysis.netlify.app/).
 
 ## Installation
 
