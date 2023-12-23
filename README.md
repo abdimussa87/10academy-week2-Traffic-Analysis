@@ -2,6 +2,8 @@
 
 Reusable Modular ELT(Extract Load Transform) project for the traffic analysis data consisting of a warehouse using Postgresql, DBT(Data Build Tool) and Airflow.
 
+To read a blog post I wrote about this project, please visit [here](https://medium.com/@abdimussa87/creating-a-data-engineering-pipeline-for-the-pneuma-dataset-f872b4fa2b26)
+
 ## Tech-Stack
 
 <img src="screenshots/tech-stack-flow-diagram.png" alt="Tech-Stack" width="1000" height="500">
@@ -25,7 +27,7 @@ You can find the live DBT dashboard with generated lineage-graphs from [here](ht
 
 ## Installation
 
-You'll need Docker to install the packages using:
+You'll need to install the packages using:
 
 ```bash
 pip install -r requirements.txt
