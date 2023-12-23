@@ -43,22 +43,22 @@ models:
         tests:
           - not_null
 
-  - name: vehicle_trajectory_speed_summary
-    description: "Shows vehicles where their average speed is greater than 50 km/h"
+  - name: fastest_vehicles_summary
+    description: "Shows vehicles where their average speed is greater than 40 km/h"
     columns:
       - name: track_id
         description: "The ID of the track"
         tests:
           - unique
           - not_null
-      - name: min_speed_recorded_for_track
-        description: "The minimum speed of vehicles in the track"
-        tests:
-          - not_null
-      - name: max_speed_recorded_for_track
-        description: "The maximum speed of vehicles in the track"
-        tests:
-          - not_null
+      # - name: min_speed_recorded_for_track
+      #   description: "The minimum speed of vehicles in the track"
+      #   tests:
+      #     - not_null
+      # - name: max_speed_recorded_for_track
+      #   description: "The maximum speed of vehicles in the track"
+      #   tests:
+      #     - not_null
       - name: avg_speed_recorded_for_track
         description: "The average speed of vehicles in the track"
         tests:
