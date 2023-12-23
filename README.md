@@ -2,6 +2,21 @@
 
 Reusable Modular ELT(Extract Load Transform) project for the traffic analysis data consisting of a warehouse using Postgresql, DBT(Data Build Tool) and Airflow.
 
+## Tech-Stack
+
+<img src="screenshots/tech-stack-flow-diagram.png" alt="Tech-Stack" width="1000" height="500">
+
+The CSV data first passes through a data processing (cleaning) part with the help of
+Python. Here empty values, incorrect data types, repeating columns will be processed
+to a structured format. Then it’ll be loaded to the data warehouse (database). Then
+transformation will be done by DBT on the data at a scheduled time set by Airflow.
+Airflow DAGs (Directed Acyclic Graphs) are created to define the workflow, specifying
+the order of execution for tasks like data extraction, dbt processing, and loading into the
+warehouse. Finally, Redash will help us create a dashboard by querying the
+transformed data from the warehouse.
+
+<!-- ![Tech Stack](screenshots/tech-stack-flow-diagram.png) -->
+
 ## Data
 
 The data used can be found from [here](https://open-traffic.epfl.ch/index.php/downloads/#1599231663903-a989d87d-e58d)
